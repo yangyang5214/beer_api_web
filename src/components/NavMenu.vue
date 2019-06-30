@@ -4,7 +4,7 @@
       :default-active="$route.path"
       class="el-menu-demo"
       mode="horizontal"
-      router=true
+      router
       @select="handleSelect"
     >
 
