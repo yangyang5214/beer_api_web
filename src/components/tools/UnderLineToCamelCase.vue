@@ -1,7 +1,7 @@
 <template>
 
-  <div class="graph_bed">
-    graph_bed
+  <div class="underLineToCamelCase">
+    underLineToCamelCase
   </div>
 
 </template>
@@ -9,7 +9,7 @@
 
 <script>
   export default {
-    name: 'GraphBed',
+    name: 'UnderLineToCamelCase',
     data() {
       return {}
     },

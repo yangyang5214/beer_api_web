@@ -1,21 +1,20 @@
 <template>
 
   <div class="daily_photo">
-    hello
+    daily_photo
   </div>
 
 </template>
 
 
 <script>
-export default {
+  export default {
     name: 'DailyPhoto',
-    data () {
-            return {
-        }
-  },
+    data() {
+      return {}
+    },
 
-}
+  }
 </script>
 
 <style scoped>
