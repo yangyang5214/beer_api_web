@@ -13,14 +13,13 @@ import UnderLineToCamelCase from "../components/tools/UnderLineToCamelCase"
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '*',
-      redirect: '/tools'
+      redirect: '/'
     },
     {
-      path: '/tools',
+      path: '/',
       name: 'HelloWorld',
       component: HelloWorld,
       children: [
