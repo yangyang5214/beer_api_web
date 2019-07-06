@@ -1,5 +1,8 @@
 <template>
   <div class="daily_photo">
+
+    <h2>每日一图</h2>
+
     <div class="block">
       <el-image :src=this.image_url></el-image>
     </div>

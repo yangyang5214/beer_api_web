@@ -3,6 +3,7 @@ import axios from 'axios'; // 引入axios
 import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
 
 axios.defaults.baseURL = 'https://api.hexianwei.com/beer/api';
+// axios.defaults.baseURL = 'http://127.0.0.1:8888/beer/api';
 
 axios.defaults.timeout = 10000;
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
