@@ -39,8 +39,9 @@
       return {
         nav_list: [
           {index: '/tools/dailyPhoto', title: '每日一图'},
+          {index: '/tools/jrebel', title: 'jrebel 激活'},
           {index: '/tools/underLineToCamelCase', title: '下换线转驼峰'},
-          {index: '/tools/graphBed', title: '图床'}
+          // {index: '/tools/graphBed', title: '图床'}
         ]
       }
     },

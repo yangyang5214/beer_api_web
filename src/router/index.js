@@ -8,6 +8,7 @@ import HelloWorld from '../components/HelloWorld'
 import GraphBed from '../components/tools/GraphBed'
 import DailyPhoto from '../components/tools/DailyPhoto'
 import UnderLineToCamelCase from "../components/tools/UnderLineToCamelCase"
+import Jrebel from "../components/tools/Jrebel"
 
 
 Vue.use(Router)
@@ -30,6 +31,10 @@ export default new Router({
         {
           path: '/tools/dailyPhoto',
           component: DailyPhoto
+        },
+        {
+          path: '/tools/jrebel',
+          component: Jrebel
         },
         {
           path: '/tools/underLineToCamelCase',
