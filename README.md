@@ -1,21 +1,25 @@
 # beer_api_web
 
-> Beer Api Web
+https://tools.hexianwei.com/#/
 
-## Build Setup
+### 展示
 
-``` bash
-# install dependencies
-npm install
+- 每日一图
 
-# serve with hot reload at localhost:8080
-npm run dev
+![](https://beef-1256523277.cos.ap-chengdu.myqcloud.com/bed/20200916202721.png)
 
-# build for production with minification
-npm run build
+- jrebel 激活
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![](https://beef-1256523277.cos.ap-chengdu.myqcloud.com/bed/20200916202847.png)
+
+
+- 下划线转驼峰
+
+其实没啥用
+
+![](https://beef-1256523277.cos.ap-chengdu.myqcloud.com/bed/20200916203015.png)
+
+- 持续更新。。。（好玩的）
+
+
