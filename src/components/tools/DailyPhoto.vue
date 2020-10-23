@@ -25,47 +25,46 @@
 
 
 <script>
-  import {dailyPhoto, daily_photo_url} from '../../request/api';
+    import {dailyPhoto, daily_photo_url} from '../../request/api';
 
-  export default {
-    name: 'DailyPhoto',
-    data() {
-      return {
-        randomSeq: 0,
-        image_url: '',
-        copyright: '',
-        source: 'https://cn.bing.com'
-      }
-    },
-    created() {
-      this.getDailyPhoto();
-    },
-    methods: {
-      getDailyPhoto() {
-        const local_url = daily_photo_url.replace('randomSeq', this.randomSeq);
-        console.log(local_url);
-        dailyPhoto(local_url).then(res => {
-          this.image_url = res.image_url;
-          this.copyright = res.copyright;
-          // this.source = res.source;
-          this.randomSeq++;
-        })
-      },
-      againSelect() {
-        this.getDailyPhoto()
-      },
-      copyImageUrl() {
-        this.$copyText(this.image_url).then(() => {
-          }, () => {
-            alert("浏览器不支持！")
-          }
-        )
-      },
-      downloadImage() {
-        alert('图片下载，待开发！！！')
-      }
+    export default {
+        name: 'DailyPhoto',
+        data() {
+            return {
+                randomSeq: 0,
+                image_url: '',
+                copyright: '',
+                source: ''
+            }
+        },
+        created() {
+            this.getDailyPhoto();
+        },
+        methods: {
+            getDailyPhoto() {
+                const url = 'http://116.232.10.46:8700/img?type=';
+                const type = Math.round(Math.random() * 5);
+                dailyPhoto(url + type).then(res => {
+                    this.image_url = res.url;
+                    this.copyright = res.msg;
+                    this.source = res.source;
+                })
+            },
+            againSelect() {
+                this.getDailyPhoto()
+            },
+            copyImageUrl() {
+                this.$copyText(this.image_url).then(() => {
+                    }, () => {
+                        alert("浏览器不支持！")
+                    }
+                )
+            },
+            downloadImage() {
+                alert('图片下载，待开发！！！')
+            }
+        }
     }
-  }
 </script>
 
 <style scoped>

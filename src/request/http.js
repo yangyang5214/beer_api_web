@@ -36,9 +36,9 @@ export function get(url, params) {
     axios.get(url, {
       params: params
     }).then(res => {
-      resolve(res.data.data);
+      resolve(res.data);
     }).catch(err => {
-      reject(err.data.message)
+      reject(err.data)
     })
   });
 }
