@@ -42,7 +42,7 @@
         },
         methods: {
             getDailyPhoto() {
-                const url = 'http://116.232.10.46:8700/img?type=';
+                const url = 'https://www.hexianwei.com/api/img?type=';
                 const type = Math.round(Math.random() * 5);
                 dailyPhoto(url + type).then(res => {
                     this.image_url = res.url;

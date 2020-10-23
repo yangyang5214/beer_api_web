@@ -44,7 +44,7 @@
     },
     methods: {
       getJrebelLisence() {
-        jrebelLicense().then(res => {
+        jrebelLicense('https://www.hexianwei.com/api/jrebel').then(res => {
           this.license = res
         })
       }
