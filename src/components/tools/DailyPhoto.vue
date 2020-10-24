@@ -1,24 +1,21 @@
 <template>
   <div class="daily_photo">
 
-    <h2>每日一图</h2>
+    <h3>搬运工</h3>
+
+    <div class="copyright" style="margin-bottom: 20px">
+      <div v-for="(msg) in msgs">{{msg}}</div>
+      <a href="">{{source}}</a>
+    </div>
 
     <div class="block">
-      <el-image :src=this.image_url></el-image>
+      <div v-if="image_urls.length > 1" v-for="(img) in image_urls" style="float:left">
+        <img class="small_img" :src=img>
+      </div>
+      <div v-else>
+        <img :src=image_urls[0] width="800px">
+      </div>
     </div>
-
-    <div class="copyright">
-      <span>{{copyright}}</span>
-      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-      来源：<a :href=source target="_blank">{{source}}</a>
-    </div>
-
-    <div class="function">
-      <el-button type="success" v-on:click=againSelect()>换一张</el-button>
-      <el-button type="success" v-on:click=copyImageUrl()>复制图片地址</el-button>
-      <el-button type="success" v-on:click=downloadImage()>下载</el-button>
-    </div>
-
   </div>
 
 </template>
@@ -32,8 +29,8 @@
         data() {
             return {
                 randomSeq: 0,
-                image_url: '',
-                copyright: '',
+                msgs: '',
+                image_urls: [],
                 source: ''
             }
         },
@@ -43,10 +40,11 @@
         methods: {
             getDailyPhoto() {
                 const url = 'https://www.hexianwei.com/api/img?type=';
-                const type = Math.round(Math.random() * 5);
+                const type = Math.round(Math.random() * 100);
                 dailyPhoto(url + type).then(res => {
-                    this.image_url = res.url;
+                    this.image_urls = res.url;
                     this.copyright = res.msg;
+                    this.msgs = res.msg.split("。");
                     this.source = res.source;
                 })
             },
@@ -76,7 +74,9 @@
 
   }
 
-  .function {
-    margin-top: 20px;
+  .small_img {
+    height: 300px;
+    margin: 10px;
   }
+
 </style>
