@@ -11,4 +11,5 @@ export const upload_photo_url = 'http://127.0.0.1:8888/beer/api/upload/image';
 export const dailyPhoto = url => get(url, '');
 export const underLineToCamelCase = p => get("/underLineToCamelCase", p);
 export const jrebelLicense = url => get(url);
+export const tips = url => get(url);
 

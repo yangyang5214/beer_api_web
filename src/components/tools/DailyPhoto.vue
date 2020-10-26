@@ -22,7 +22,7 @@
 
 
 <script>
-    import {dailyPhoto, daily_photo_url} from '../../request/api';
+    import {dailyPhoto} from '../../request/api';
 
     export default {
         name: 'DailyPhoto',
