@@ -33,23 +33,21 @@
 
 
 <script>
-  import {jrebelLicense} from '../../request/api';
-
-  export default {
-    name: 'DailyPhoto',
-    data() {
-      return {
-        license: ''
-      }
-    },
-    methods: {
-      getJrebelLisence() {
-        jrebelLicense('https://www.hexianwei.com/api/jrebel').then(res => {
-          this.license = res
-        })
-      }
+export default {
+  name: 'DailyPhoto',
+  data() {
+    return {
+      license: ''
+    }
+  },
+  methods: {
+    getJrebelLisence() {
+      this.$axios('https://www.hexianwei.com/api/jrebel').then(res => {
+        this.license = res.data
+      })
     }
   }
+}
 </script>
 
 <style scoped>

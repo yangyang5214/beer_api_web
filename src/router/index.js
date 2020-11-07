@@ -5,8 +5,8 @@ import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
 
 // 小工具
+import Urlparse from '../components/tools/Urlparse'
 import DailyPhoto from '../components/tools/DailyPhoto'
-import UnderLineToCamelCase from "../components/tools/UnderLineToCamelCase"
 import Jrebel from "../components/tools/Jrebel"
 import Tips from "../components/tools/Tips"
 
@@ -39,11 +39,10 @@ export default new Router({
         {
           path: '/tools/jrebel',
           component: Jrebel
-        },
-        {
-          path: '/tools/underLineToCamelCase',
-          name: 'UnderLineToCamelCase',
-          component: UnderLineToCamelCase
+        }, {
+          path: '/tools/urlparse',
+          name: 'urlparse',
+          component: Urlparse
         },
       ]
     }

@@ -3,7 +3,7 @@
     <h1>Tips</h1>
 
     <div style="margin-top: 30px">
-      {{tips}}
+      {{ tips }}
     </div>
 
 
@@ -19,26 +19,24 @@
 </template>
 
 <script>
-    import {tips} from '../../request/api';
-
-    export default {
-        name: 'UnderLineToCamelCase',
-        data() {
-            return {
-                tips: '',
-            }
-        },
-        created() {
-            this.getTips()
-        },
-        methods: {
-            getTips() {
-                tips('https://www.hexianwei.com/api/tips').then(res => {
-                    this.tips = res
-                })
-            }
-        }
+export default {
+  name: 'UnderLineToCamelCase',
+  data() {
+    return {
+      tips: '',
     }
+  },
+  created() {
+    this.getTips()
+  },
+  methods: {
+    getTips() {
+      this.$axios('https://www.hexianwei.com/api/tips').then(res => {
+        this.tips = res.data
+      })
+    }
+  }
+}
 </script>
 
 <style>

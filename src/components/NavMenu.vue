@@ -48,6 +48,7 @@
                     {index: '/tools/dailyPhoto', title: '随机一图'},
                     {index: '/tools/jrebel', title: 'jrebel 激活'},
                     {index: '/tools/tips', title: 'tips'},
+                    {index: '/tools/urlparse', title: 'urlparse'},
                 ]
             }
         },
