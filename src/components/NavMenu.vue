@@ -65,6 +65,7 @@ export default {
       ],
       favorite_nav_list: [
         {index: 'https://crontab.guru/', title: 'crontab'},
+        {index: 'https://curl.trillworks.com/', title: 'curl to python'}
       ]
     }
   },
