@@ -62,6 +62,7 @@ export default {
         {index: '/tools/jrebel', title: 'jrebel 激活'},
         {index: '/tools/tips', title: 'tips'},
         {index: '/tools/urlparse', title: 'urlparse'},
+        {index: '/tools/words', title: 'words'},
       ],
       favorite_nav_list: [
         {index: 'https://crontab.guru/', title: 'crontab'},

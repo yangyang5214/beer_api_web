@@ -9,6 +9,7 @@ import Urlparse from '../components/tools/Urlparse'
 import DailyPhoto from '../components/tools/DailyPhoto'
 import Jrebel from "../components/tools/Jrebel"
 import Tips from "../components/tools/Tips"
+import Words from "../components/tools/Words"
 
 
 Vue.use(Router)
@@ -39,10 +40,16 @@ export default new Router({
         {
           path: '/tools/jrebel',
           component: Jrebel
-        }, {
+        },
+        {
           path: '/tools/urlparse',
           name: 'urlparse',
           component: Urlparse
+        },
+        {
+          path: '/tools/words',
+          name: 'words',
+          component: Words
         },
       ]
     }
