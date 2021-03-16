@@ -1,11 +1,28 @@
 <template>
   <div class="daily_photo">
 
-    <h3>搬运工</h3>
+    <h3>
+      搬运工：数据来自互联网
+    </h3>
+
+    <div>
+      <el-select v-model="type" placeholder="请选择">
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value">
+        </el-option>
+      </el-select>
+
+      <el-button type="success" v-on:click="againSelect()">
+        换一个
+      </el-button>
+    </div>
+
 
     <div class="copyright" style="margin-bottom: 20px">
       <div v-for="(msg) in msgs">{{ msg }}</div>
-      <a href="">{{ source }}</a>
     </div>
 
     <div class="block">
@@ -30,7 +47,20 @@ export default {
       randomSeq: 0,
       msgs: '',
       image_urls: [],
-      source: ''
+      source: '',
+      type: '知乎',
+      options: [
+        {
+          label: '知乎',
+          value: '1'
+        }, {
+          label: '必应',
+          value: '0'
+        }, {
+          label: 'keep',
+          value: '2'
+        }
+      ],
     }
   },
   created() {
@@ -39,8 +69,7 @@ export default {
   methods: {
     getDailyPhoto() {
       const url = 'https://www.hexianwei.com/api/img?type=';
-      const type = Math.round(Math.random() * 100);
-      this.$axios(url + type).then(res => {
+      this.$axios(url + this.type).then(res => {
         const data = res.data
         this.image_urls = data.url;
         this.copyright = data.msg;
