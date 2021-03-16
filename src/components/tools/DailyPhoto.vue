@@ -48,7 +48,7 @@ export default {
       msgs: '',
       image_urls: [],
       source: '',
-      type: '知乎',
+      type: '1',
       options: [
         {
           label: '知乎',
