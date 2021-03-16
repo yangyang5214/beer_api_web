@@ -40,12 +40,12 @@
           target="_blank"
         >个人网站</a>
       </el-menu-item>
-      <el-menu-item index="4">
-        <a
-          href="https://yangyang5214.github.io/note/"
-          target="_blank"
-        >个人笔记</a>
-      </el-menu-item>
+<!--      <el-menu-item index="4">-->
+<!--        <a-->
+<!--          href="https://yangyang5214.github.io/note/"-->
+<!--          target="_blank"-->
+<!--        >个人笔记</a>-->
+<!--      </el-menu-item>-->
 
     </el-menu>
   </div>
