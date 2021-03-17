@@ -53,12 +53,22 @@ export default {
         {
           label: '知乎',
           value: '1'
-        }, {
+        },
+         {
           label: '必应',
           value: '0'
-        }, {
+        },
+        {
           label: 'keep',
           value: '2'
+        },
+        {
+          label: '马蜂窝',
+          value: '3'
+        },
+        {
+          label: '美篇',
+          value: '4'
         }
       ],
     }
