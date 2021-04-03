@@ -52,23 +52,19 @@ export default {
       options: [
         {
           label: '知乎',
-          value: '1'
-        },
-         {
-          label: '必应',
-          value: '0'
+          value: 'ZHI_HU'
         },
         {
           label: 'keep',
-          value: '2'
+          value: 'KEEP'
         },
         {
           label: '马蜂窝',
-          value: '3'
+          value: 'MFW'
         },
         {
           label: '美篇',
-          value: '4'
+          value: 'MEI_PIAN'
         }
       ],
     }
