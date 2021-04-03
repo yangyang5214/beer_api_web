@@ -48,7 +48,7 @@ export default {
       msgs: '',
       image_urls: [],
       source: '',
-      type: '1',
+      type: 'ZHI_HU',
       options: [
         {
           label: '知乎',
@@ -74,7 +74,7 @@ export default {
   },
   methods: {
     getDailyPhoto() {
-      const url = 'https://www.hexianwei.com/api/img?type=';
+      const url = 'https://www.hexianwei.com/api/img?source=';
       this.$axios(url + this.type).then(res => {
         const data = res.data
         this.image_urls = data.url;
