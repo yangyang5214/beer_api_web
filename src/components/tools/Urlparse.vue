@@ -34,7 +34,7 @@ export default {
   name: 'urlparse',
   data() {
     return {
-      url: 'https://github.com?age=13',
+      url: 'https://api.zolaprod.babylone.io/proxy-search/algolia/products?index=zolaprod_products&country=CN&locale=en&date=2021-04-04T13:37:15.203Z&queries=%7B%22ruleContexts%22:%22women_nouveautes_COUNTRY_CN%22,%22searchType%22:%22tag%22,%22tagFilters%22:[%22women_nouveautes%22,%22CN%22],%22numericFilters%22:[[%22discontinued%22,%22!%3D%22,1]]%7D',
       result: '',
     }
   },
@@ -45,8 +45,7 @@ export default {
         'url': this.url
       }
       this.$axios({
-        // url: 'https://www.hexianwei.com/api/crawler/param',
-        url: 'http://127.0.0.1:9092/crawler/param',
+        url: 'https://www.hexianwei.com/api/crawler/param',
         method: 'post',
         data: body,
         header:{
