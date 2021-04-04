@@ -45,7 +45,8 @@ export default {
         'url': this.url
       }
       this.$axios({
-        url: 'https://www.hexianwei.com/api/urlparams',
+        // url: 'https://www.hexianwei.com/api/crawler/param',
+        url: 'http://127.0.0.1:9092/crawler/param',
         method: 'post',
         data: body,
         header:{
