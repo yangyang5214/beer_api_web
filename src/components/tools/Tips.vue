@@ -3,7 +3,10 @@
     <h1>Tips</h1>
 
     <div style="margin-top: 30px">
-      {{ tips }}
+      <h3 style="color: red">{{ content }}</h3>
+      <div>
+        详情：<a :href="this.getHref()" target="_blank">{{ link }}</a>
+      </div>
     </div>
 
 
@@ -24,6 +27,8 @@ export default {
   data() {
     return {
       tips: '',
+      link: '',
+      content: '',
     }
   },
   created() {
@@ -33,7 +38,12 @@ export default {
     getTips() {
       this.$axios('https://www.hexianwei.com/api/tips').then(res => {
         this.tips = res.data
+        this.content = this.tips.content
+        this.link = this.tips.link
       })
+    },
+    getHref() {
+      return this.link
     }
   }
 }
