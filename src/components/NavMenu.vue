@@ -40,12 +40,12 @@
           target="_blank"
         >个人网站</a>
       </el-menu-item>
-<!--      <el-menu-item index="4">-->
-<!--        <a-->
-<!--          href="https://yangyang5214.github.io/note/"-->
-<!--          target="_blank"-->
-<!--        >个人笔记</a>-->
-<!--      </el-menu-item>-->
+      <el-menu-item index="4">
+        <a
+          href="https://beef.hexianwei.com"
+          target="_blank"
+        >小贴士</a>
+      </el-menu-item>
 
     </el-menu>
   </div>
@@ -62,7 +62,7 @@ export default {
         {index: '/tools/jrebel', title: 'jrebel 激活'},
         {index: '/tools/tips', title: 'tips'},
         {index: '/tools/urlparse', title: 'urlparse'},
-        {index: '/tools/words', title: 'words'},
+        // {index: '/tools/words', title: 'words'},
       ],
       favorite_nav_list: [
         {index: 'https://crontab.guru/', title: 'crontab'},
