@@ -77,8 +77,8 @@ export default {
       const url = 'https://www.hexianwei.com/api/img?source=';
       this.$axios(url + this.type).then(res => {
         const data = res.data
-        this.image_urls = data.img;
-        this.msgs = data.content.split("。");
+        this.image_urls = data.url;
+        this.msgs = data.msg.split("。");
         this.source = data.source;
       })
     },

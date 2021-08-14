@@ -42,9 +42,9 @@
       </el-menu-item>
       <el-menu-item index="4">
         <a
-          href="https://beef.hexianwei.com"
+          href="https://code.hexianwei.com"
           target="_blank"
-        >小贴士</a>
+        ><b>30 seconds of code</b></a>
       </el-menu-item>
 
     </el-menu>
