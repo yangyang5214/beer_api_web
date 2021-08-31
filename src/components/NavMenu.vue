@@ -46,7 +46,12 @@
           target="_blank"
         ><b>30 seconds of code</b></a>
       </el-menu-item>
-
+     <el-menu-item index="4">
+        <a
+          href="https://beer5214.notion.site/beer5214/beer-caa96c1c00a14b3f8219971d0cd04269"
+          target="_blank"
+        ><b>My Notion</b></a>
+      </el-menu-item>
     </el-menu>
   </div>
 
